@@ -7,12 +7,12 @@ using Newtonsoft.Json;
 
 namespace JotDown.MobileAppService.DataObjects
 {
-    public class TodoItem
-    {
-        [JsonProperty( PropertyName = "name" )]
-        public string Name { get; set; }
+    //public class TodoItem
+    //{
+    //    [JsonProperty( PropertyName = "name" )]
+    //    public string Name { get; set; }
 
-        [JsonProperty(PropertyName = "complete")]
-        public bool Complete { get; set; } = false;
-    }
+    //    [JsonProperty(PropertyName = "complete")]
+    //    public bool Complete { get; set; } = false;
+    //}
 }

@@ -1,5 +1,4 @@
 ﻿using System.Linq;
-using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
@@ -12,7 +11,7 @@ using JotDown.MobileAppService.Models;
 namespace JotDown.MobileAppService.Controllers
 {
     // TODO: Uncomment [Authorize] attribute to require user be authenticated to access Item(s).
-    // [Authorize]
+    [Authorize]
     public class ItemController : TableController<Item>
     {
         protected override void Initialize( HttpControllerContext controllerContext )
