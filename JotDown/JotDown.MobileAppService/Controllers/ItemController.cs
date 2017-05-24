@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
@@ -24,7 +25,10 @@ namespace JotDown.MobileAppService.Controllers
         // GET tables/Item
         public IQueryable<Item> GetAllItems()
         {
-            return Query();
+            //var user = RequestContext.Principal.Identity.Name;
+            ClaimsPrincipal claimsUser = (ClaimsPrincipal) this.User;
+            string id = claimsUser.FindFirst( ClaimTypes.NameIdentifier ).Value;
+            return Query().Where(i=>i.Account.Equals(id));
         }
 
         // GET tables/Item/48D68C86-6EA6-4C25-AA33-223FC9A27959

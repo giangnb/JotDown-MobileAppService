@@ -184,6 +184,7 @@
   <ItemGroup>
     <Compile Include="App_Start\Startup.MobileApp.cs" />
     <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataObjects\Item.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
     <Compile Include="Models\MasterDetailContext.cs" />
